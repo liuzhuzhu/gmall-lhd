@@ -37,8 +37,10 @@
     </div>
 </div>
 
-<script language="JavaScript">
+<SCRIPT language="JavaScript">
+
     function saveSpuSaleAttr() {
+
         // 获得销售属性信息
         var saleAttrId = $("#saleAttrSelect").combobox("getValue");
         var saleAttrName = $("#saleAttrSelect").combobox("getText");
@@ -73,6 +75,7 @@
         var rowIndex = $("#spuSaleAttrValueDg").datagrid("getRowIndex",selectRow);
         $("#spuSaleAttrValueDg").datagrid("deleteRow",rowIndex);
     }
+
     function initSpuSaleAttrDlg(){
 
         var spuSaleAttrValueDg=$("#spuSaleAttrValueDg").datagrid({url:""});
@@ -101,6 +104,6 @@
         });
 
     }
-</script>
+</SCRIPT>
 </body>
 </html>

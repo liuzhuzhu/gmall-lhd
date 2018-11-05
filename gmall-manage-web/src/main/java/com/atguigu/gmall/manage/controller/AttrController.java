@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class AttrController {
@@ -16,19 +17,20 @@ public class AttrController {
     @Reference
     AttrService attrService;
 
-    @RequestMapping("getAttrBaseInfoByC3id")
-    @ResponseBody
-    public List<BaseAttrInfo> getAttrBaseInfoByC3id(@RequestParam String c3id){
-
-        List<BaseAttrInfo> attrInfoList = attrService.getAttrBaseInfoByC3id(c3id);
-        return attrInfoList;
-    }
-
     @RequestMapping("saveAttr")
     @ResponseBody
     public String saveAttr(BaseAttrInfo baseAttrInfo){
 
         attrService.saveAttr(baseAttrInfo);
         return "success";
+    }
+
+
+    @RequestMapping("getAttrListByCtg3")
+    @ResponseBody
+    public List<BaseAttrInfo> getAttrListByCtg3(@RequestParam Map<String ,String> map){
+        String catalog3Id = map.get("catalog3Id");
+        List<BaseAttrInfo> baseAttrInfos = attrService.getAttrBaseInfoByC3id(catalog3Id);
+        return baseAttrInfos;
     }
 }

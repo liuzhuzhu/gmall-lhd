@@ -25,6 +25,19 @@ public class AttrServiceImpl implements AttrService {
         BaseAttrInfo baseAttrInfo = new BaseAttrInfo();
         baseAttrInfo.setCatalog3Id(c3id);
         List<BaseAttrInfo> list = attrBaseInfoMapper.select(baseAttrInfo);
+
+        if(null!=list&&list.size()>0){
+            for (BaseAttrInfo attrInfo : list) {
+                String attrId = attrInfo.getId();
+
+                BaseAttrValue baseAttrValue = new BaseAttrValue();
+                baseAttrValue.setAttrId(attrId);
+                List<BaseAttrValue> select1 = baseAttrValueMapper.select(baseAttrValue);
+
+                attrInfo.setAttrValueList(select1);
+            }
+        }
+
         return list;
     }
 
