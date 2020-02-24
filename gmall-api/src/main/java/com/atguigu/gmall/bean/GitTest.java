@@ -7,9 +7,16 @@ public class GitTest {
 
         System.out.println("开始阿兹1.0.1 开发代码了");
 
+        int e = 1;
+
     }
 
     public void wxPay(){
         System.out.println("微信支付完成...");
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
     }
 }
