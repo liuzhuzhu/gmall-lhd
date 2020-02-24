@@ -62,4 +62,9 @@ public class BaseAttrInfo implements Serializable {
     public void setAttrValueList(List<BaseAttrValue> attrValueList) {
         this.attrValueList = attrValueList;
     }
+
+    public void Prolem(){
+        System.out.println("测试冲突");
+    }
+
 }

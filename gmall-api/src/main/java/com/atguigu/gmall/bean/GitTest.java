@@ -7,7 +7,9 @@ public class GitTest {
 
         System.out.println("开始阿兹1.0.1 开发代码了");
 
+    }
 
-
+    public void wxPay(){
+        System.out.println("微信支付完成...");
     }
 }
