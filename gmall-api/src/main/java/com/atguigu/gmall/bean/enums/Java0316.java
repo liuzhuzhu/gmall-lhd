@@ -9,6 +9,7 @@ public class Java0316 {
      *      *              git push
      */
     public void addCart(){
+        System.out.println("测试了一下");
         System.out.println("添加购物车");
     }
 }
