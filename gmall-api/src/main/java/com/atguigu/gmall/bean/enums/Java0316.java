@@ -12,4 +12,11 @@ public class Java0316 {
         System.out.println("测试了一下");
         System.out.println("添加购物车");
     }
+    /**
+     * 2020 09 16
+     * 无论任何时候,只要不是第一次创建分支,就需要执行git pull 操作 保证本地代码与远程仓库的高度一致性
+     */
+    public void updateCart(){
+        System.out.println("添加购物车");
+    }
 }
