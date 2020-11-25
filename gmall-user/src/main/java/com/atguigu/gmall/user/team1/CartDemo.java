@@ -11,4 +11,8 @@ public class CartDemo {
      public void delCart(){
         System.out.println("team1 第一天 开发 购物车");
     }
+    //第二天
+    public void update(int num){
+        System.out.println("team1 第二天 开发 购物车");
+    }
 }
