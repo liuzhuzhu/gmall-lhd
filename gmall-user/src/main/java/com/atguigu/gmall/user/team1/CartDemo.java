@@ -8,4 +8,7 @@ public class CartDemo {
     public void addCart(){
         System.out.println("team1 第一天 开发 购物车");
     }
+     public void delCart(){
+        System.out.println("team1 第一天 开发 购物车");
+    }
 }
